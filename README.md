@@ -1,2 +1,2 @@
 # AplicacionesWeb
-Proyecto
+Proyecto de aplicaciones Web
