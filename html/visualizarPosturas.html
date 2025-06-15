@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalles de Postura</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="barra">
+    <img src="/img/logo.png" alt="Logo Casa Anahata" class="logo">
+    <h1 class="marca">Casa Anahata</h1>
+  </div>
+
+  <main class="contenido-panel">
+    <div class="tarjeta">
+      <h2>Instrucciones de la postura</h2>
+
+      <!-- Aquí se mostrarán los detalles extraídos de la base de datos -->
+      <p><strong>Nombre:</strong> <span id="postura-nombre">Cargando...</span></p>
+      <p><strong>Nombre en Sánscrito:</strong> <span id="postura-sanskrito">Cargando...</span></p>
+      <p><strong>Beneficios:</strong> <span id="postura-beneficios">Cargando...</span></p>
+      <p><strong>Instrucciones:</strong> <span id="postura-instrucciones">Cargando...</span></p>
+
+      <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
+        <iframe 
+          id="youtube-video"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          src="" 
+          title="Reproductor de video de YouTube" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <a id="regresar-btn" href="#" class="btn-primario">Regresar</a>
+      </div>
+
+      <!-- Comentario: Esta página debe recibir un ID de postura desde la ejecución
+           para cargar dinámicamente los datos e instrucciones desde la base de datos -->
+    </div>
+  </main>
+</body>
+</html>

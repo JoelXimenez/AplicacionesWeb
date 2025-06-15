@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejecutando Serie</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="barra">
+    <img src="/img/logo.png" alt="Logo" class="logo" />
+    <div class="marca">Casa Anahata</div>
+    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.html'">Cerrar sesión</button>
+  </div>
+
+  <div class="panel">
+    <div class="menu-lateral">
+      <button class="btn-menu activo">Ejecutar sesión</button>
+      <button class="btn-menu" onclick="location.href='registroSesion.html'">Registrar evaluación</button>
+      <button class="btn-menu" onclick="location.href='detalleSesion.html'">Ver historial</button>
+    </div>
+
+    <div class="contenido-panel">
+      <div class="tarjeta">
+    <h2 id="postura-titulo">Cargando postura...</h2>
+    
+    <div class="imagen-postura">
+      <img id="postura-imagen" src="" alt="Postura actual" style="max-width: 100%; margin-bottom: 1rem; display: none;">
+    </div>
+
+    <div id="timer-display" style="font-size: 3rem; font-weight: bold; margin: 1rem 0; color: #1ABC83;">--:--</div>
+    <p id="postura-duracion">Duración sugerida: -- minuto(s)</p>
+
+    <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+        <button id="start-pause-btn" class="btn-primario">Iniciar</button>
+        <button id="reset-btn" class="btn-primario">Reiniciar</button>
+        <a id="detalles-btn" href="#" class="btn-primario">Ver detalles</a>
+        <a id="anterior-btn" href="#"  class="btn-primario">Postura Anterior</a>
+        <a id="siguiente-btn" href="#" class="btn-primario">Siguiente postura</a>
+    </div>
+</div>
+    </div>
+  </div>
+</body>
+</html>
