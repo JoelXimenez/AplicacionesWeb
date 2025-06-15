@@ -18,7 +18,7 @@ body, html {
 
 /* Estilos para páginas de login/registro */
 .fondo {
-  background: url('/assets/img/fondo.jpg') no-repeat center center fixed;
+  background: url('/img/fondo.jpg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   color: white;
