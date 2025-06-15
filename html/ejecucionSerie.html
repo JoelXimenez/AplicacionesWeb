@@ -6,7 +6,7 @@
   <title>Ejecutando Serie</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+<body class="dashboard">
   <div class="barra">
     <img src="../assets/img/logo.png" alt="Logo" class="logo" />
     <div class="marca">Casa Anahata</div>
@@ -22,23 +22,21 @@
 
     <div class="contenido-panel">
       <div class="tarjeta">
-    <h2 id="postura-titulo">Cargando postura...</h2>
-    
-    <div class="imagen-postura">
-      <img id="postura-imagen" src="" alt="Postura actual" style="max-width: 100%; margin-bottom: 1rem; display: none;">
-    </div>
-
-    <div id="timer-display" style="font-size: 3rem; font-weight: bold; margin: 1rem 0; color: #1ABC83;">--:--</div>
-    <p id="postura-duracion">Duración sugerida: -- minuto(s)</p>
-
-    <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-        <button id="start-pause-btn" class="btn-primario">Iniciar</button>
-        <button id="reset-btn" class="btn-primario">Reiniciar</button>
-        <a id="detalles-btn" href="#" class="btn-primario">Ver detalles</a>
-        <a id="anterior-btn" href="#"  class="btn-primario">Postura Anterior</a>
-        <a id="siguiente-btn" href="#" class="btn-primario">Siguiente postura</a>
-    </div>
-</div>
+        <div class="postura-container">
+            <div class="progreso-serie">Postura 1 de 4</div>
+            <h2 id="postura-titulo">Postura del Gato-Vaca</h2>
+            
+            <img id="postura-imagen" src="../assets/img/gato-vaca.jpg" alt="Postura del Gato-Vaca" class="imagen-postura-grande">
+            
+            <div id="timer-display" style="font-size: 4rem; font-weight: bold; margin: 1rem 0; color: #1ABC83;">02:00</div>
+            
+            <div class="controles-sesion">
+                <button id="start-pause-btn" class="btn-primario">Pausar</button>
+                <button id="reset-btn" class="btn-secundario">Reiniciar Postura</button>
+                <a id="detalles-btn" href="visualizarPosturas.html" class="btn-secundario">Ver Instrucciones</a>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

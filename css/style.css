@@ -327,3 +327,159 @@ body, html {
   justify-content: center;
   align-items: center;
 }
+
+.tabla-pacientes {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
+    .tabla-pacientes th, .tabla-pacientes td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: left;
+    }
+    .tabla-pacientes th {
+      background-color: #f8f9fa;
+      font-weight: 500;
+      color: #333;
+    }
+    .acciones-paciente {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .header-gestion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+    
+
+    .paso-asignacion {
+      margin-bottom: 2rem;
+    }
+    .resumen-serie {
+      border-top: 1px solid #eee;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      color: #555;
+    }
+    .resumen-serie p {
+      margin: 0.5rem 0;
+    }
+
+.paso-creacion {
+      border-bottom: 2px solid #e0f2f1;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+    }
+    .constructor-secuencia {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .catalogo-posturas, .secuencia-actual {
+      flex: 1;
+      background-color: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    .catalogo-posturas h4, .secuencia-actual h4 {
+      margin-top: 0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+    }
+    .postura-disponible, .postura-en-serie {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .postura-en-serie input {
+      width: 80px;
+      text-align: center;
+    }
+    .btn-anadir {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .postura-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .imagen-postura-grande {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 8px;
+      background-color: #eee; /* Placeholder color */
+      min-height: 300px; /* Placeholder height */
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .progreso-serie {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #555;
+        background-color: #e0f2f1;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+    }
+.tabla-posturas {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
+    .tabla-posturas th, .tabla-posturas td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: left;
+    }
+    .tabla-posturas th {
+      background-color: #f8f9fa;
+    }
+    .acciones-postura {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .terapia-tag {
+        display: inline-block;
+        background-color: #e0f2f1;
+        color: #00796b;
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        margin: 2px;
+    }
+
+.grupo-checkbox { display: flex; flex-wrap: wrap; gap: 1.5rem; background-color: #f8f9fa; padding: 1rem; border-radius: 8px;}
+    .grupo-checkbox label { display: flex; align-items: center; gap: 0.5rem; }
+
+  
+.grupo-botones-rol button{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+}
+
+.controles-sesion a{
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#detalles-btn{
+  color: #000;
+}

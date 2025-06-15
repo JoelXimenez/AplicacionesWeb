@@ -15,28 +15,49 @@
     <div class="panel">
         <div class="menu-lateral">
             <button class="btn-menu" onclick="location.href='dashboard.html'">Dashboard</button>
-            <button class="btn-menu" onclick="location.href='gestionPacientes.html'">Gestionar pacientes</button>
+            <button class="btn-menu activo">Gestionar pacientes</button>
             <button class="btn-menu" onclick="location.href='crearSerie.html'">Crear serie terapéutica</button>
             <button class="btn-menu" onclick="location.href='asignarSerie.html'">Asignar serie</button>
-          </div>
+        </div>
         <div class="contenido-panel">
             <div class="tarjeta">
-                <h2>Gestión de Pacientes</h2>
-                <form class="formulario">
-                    <h3>Agregar nuevo paciente</h3>
-                    <input type="text" name="cedula" placeholder="Cédula del paciente" required />
-                    <input type="text" name="nombre" placeholder="Nombre completo" required />
-                    <input type="email" name="correo" placeholder="Correo electrónico" required />
-                    <input type="tel" name="telefono" placeholder="Teléfono" required/>
-                    <input type="date" name="fechaNacimiento" placeholder="Fecha de nacimiento" required />
-                    <button type="submit" class="btn-primario">Agregar paciente</button>
-                </form>
-                <br/>
-                <h3>Pacientes registrados</h3>
-                <ul>
-                    <li>Ana Pérez <button class="btn-primario">Editar</button> <button class="btn-primario">Historial</button></li>
-                    <li>Luis López <button class="btn-primario">Editar</button> <button class="btn-primario">Historial</button></li>
-                </ul>
+                <div class="header-gestion">
+                    <h2>Gestión de Pacientes</h2>
+                    <a href="registroPaciente.html" class="btn-primario">Registrar Nuevo Paciente</a>
+                </div>
+                
+                <input type="text" placeholder="Buscar por nombre o correo..." style="width:100%; max-width:400px; margin-bottom: 1rem;">
+
+                <table class="tabla-pacientes">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo Electrónico</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ana Pérez</td>
+                            <td>ana.perez@email.com</td>
+                            <td>0987654321</td>
+                            <td class="acciones-paciente">
+                                <a href="editarPaciente.html" class="btn-secundario">Editar</a>
+                                <a href="detalleSesion.html" class="btn-secundario">Historial</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Luis López</td>
+                            <td>luis.lopez@email.com</td>
+                            <td>0991234567</td>
+                            <td class="acciones-paciente">
+                                <a href="editarPaciente.html" class="btn-secundario">Editar</a>
+                                <a href="detalleSesion.html" class="btn-secundario">Historial</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

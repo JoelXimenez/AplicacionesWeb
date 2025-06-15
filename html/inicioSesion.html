@@ -11,14 +11,15 @@
     <h1 class="titulo-logo">Casa Anahata</h1>
     <div class="contenedor-formulario">
       <form class="formulario" method="POST">
+        <h2 style="margin-bottom: 1.5rem;">Iniciar Sesión</h2>
         <input type="email" name="correo" placeholder="Correo electrónico" required>
         <input type="password" name="password" placeholder="Contraseña" required>
 
         <div class="grupo-botones-rol">
-          <button type="submit" formaction="ejecutarSesion.html" class="btn-primario">Entrar como Paciente</button>
+          <button type="submit" formaction="dashboardPaciente.html" class="btn-primario">Entrar como Paciente</button>
           <button type="submit" formaction="dashboard.html" class="btn-primario">Entrar como Instructor</button>
+          <button type="submit" formaction="gestionPosturas.html" class="btn-secundario">Entrar como Administrador</button>
         </div>
-
         <p class="enlace-registro">
           ¿Eres instructor y no tienes cuenta?
           <a href="registro.html">Regístrate aquí</a>

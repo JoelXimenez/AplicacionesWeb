@@ -10,7 +10,7 @@
     <div class="contenedor-izquierdo">
         <h1 class="titulo-logo">Casa Anahata</h1>
         <div class="contenedor-formulario">
-            <form class="formulario" method="POST" action="/registro">
+            <form class="formulario" method="POST" action="/registro" enctype="multipart/form-data">
                 <h2>Registro para instructores</h2>
                 
                 <input type="text" name="nombre" placeholder="Nombre completo" required>
@@ -18,6 +18,8 @@
                 <input type="password" name="password" placeholder="Contraseña" required>
                 <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
                 
+                <label for="documento" style="color:white; margin-top: 1rem; margin-bottom: 0.5rem; font-size: 0.9rem;">Documento de certificación (PDF, JPG)</label>
+                <input type="file" name="documento" id="documento" required style="color: white;">
                 <button type="submit" class="btn-primario">Registrarme como Instructor</button>
                 
                 <p class="enlace-login">
