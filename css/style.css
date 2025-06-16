@@ -1,485 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
 
-/* Estilos generales */
+/* ======                   ESTILOS GENERALES Y BASE                 ======*/
+*, *::before, *::after {
+  box-sizing: border-box; /* Regla CLAVE para layouts predecibles */
+}
+
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
   height: 100%;
-}
-
-.titulo-logo {
-  font-family: 'Qwitcher Grypen', cursive;
-  font-size: 3.5rem;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 1rem;
-}
-
-/* Estilos para páginas de login/registro */
-.fondo {
-  background: url('../assets/img/fondo.jpg') no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh;
-  color: white;
-  display: flex;
-}
-
-.contenedor-izquierdo {
-  width: 50%;
-  min-width: 400px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.titulo {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: 1px;
-  font-family: 'Qwitcher Grypen', cursive;
-}
-
-.contenedor-formulario {
-  background-color: rgba(0, 80, 60, 0.7);
-  padding: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos para el panel del instructor */
-.dashboard {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #f0f8ff;
-}
-
-.barra {
-  background-color: #1ABC83;
-  padding: 0.8rem 2rem;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.logo {
-  height: 40px;
-  margin-right: 15px;
-}
-
-.marca {
-  font-size: 1.8rem;
-  font-weight: 600;
-  font-family: 'Qwitcher Grypen', cursive;
-  color: white;
-  margin-right: auto;
-}
-
-.nav-usuario {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.btn-cerrar-sesion {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.3);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.panel {
-  display: flex;
-  flex-grow: 1;
-}
-
-.menu-lateral {
-  width: 220px;
-  background-color: #f8f9fa;
-  padding: 1.5rem 0;
-  border-right: 1px solid #ddd;
-}
-
-.btn-menu {
-  width: 100%;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  background: transparent;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.btn-menu:hover {
-  background-color: #e0f2f1;
-}
-
-.btn-menu.activo {
-  background-color: #d0e8e2;
-  font-weight: 500;
-}
-
-.contenido-panel {
-  flex: 1;
-  padding: 2rem;
   background-color: #f1f5f9;
 }
 
-.tarjeta {
-  background: white;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  max-width: 800px;
+/* --- Estilos para páginas de Login/Registro --- */
+.fondo { background: url('../assets/img/fondo.jpg') no-repeat center center fixed; background-size: cover; min-height: 100vh; color: white; display: flex; }
+.contenedor-izquierdo { width: 50%; min-width: 400px; padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+.titulo-logo { font-family: 'Qwitcher Grypen', cursive; font-size: 3.5rem; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); margin-bottom: 1rem; }
+.contenedor-formulario { background-color: rgba(0, 80, 60, 0.7); padding: 2rem; border-radius: 10px; width: 100%; max-width: 400px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+
+/* --- Estilos para el Layout del Panel (Dashboard) --- */
+.dashboard { display: flex; flex-direction: column; min-height: 100vh; }
+.barra { background-color: #1ABC83; padding: 0.6rem 2rem; display: flex; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 900; }
+.logo { height: 30px; margin-right: 15px; }
+.marca { font-size: 1.6rem; font-weight: 600; font-family: 'Qwitcher Grypen', cursive; color: white; margin-right: auto; }
+.btn-cerrar-sesion { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+.panel { display: flex; flex-grow: 1; }
+.menu-lateral { width: 240px; background-color: #ffffff; padding: 1.5rem 0; border-right: 1px solid #e2e8f0; }
+.btn-menu { width: 100%; padding: 0.9rem 1.5rem; border: none; background: transparent; text-align: left; font-size: 0.95rem; color: #334155; display: flex; align-items: center; gap: 0.8rem; cursor: pointer; transition: all 0.2s; border-left: 4px solid transparent; }
+.btn-menu:hover { background-color: #f1f5f9; color: #1e293b; }
+.btn-menu.activo { background-color: #e0f2f1; font-weight: 600; color: #00796b; border-left: 4px solid #1ABC83; }
+.contenido-panel { flex: 1; padding: 2rem; }
+.tarjeta { background: white; border-radius: 8px; padding: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.06); max-width: 900px; margin: 0 auto; }
+
+/* --- Estilos de Formularios --- */
+.form-group { margin-bottom: 1rem; }
+.form-group label, .formulario label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: #334155; }
+.formulario-login .form-group label { color: rgba(255, 255, 255, 0.8); }
+.formulario input, .formulario select, .formulario textarea { width: 100%; padding: 0.8rem; border-radius: 6px; border: 1px solid #cbd5e1; background-color: #f8fafc; margin-bottom: 1rem; }
+.formulario input:focus, .formulario select:focus, .formulario textarea:focus { outline: 2px solid #1ABC83; border-color: #1ABC83; background-color: white; }
+.fila-doble { display: flex; gap: 1rem; }
+.fila-doble > * { flex: 1; }
+
+/* --- Estilos de Botones (Unificado) --- */
+.btn { padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; transition: all 0.3s ease; border: 2px solid transparent; }
+.btn-primario { background-color: #1ABC83; color: white; border-color: #1ABC83; }
+.btn-primario:hover { background-color: #17a673; border-color: #17a673; }
+.btn-secundario { background-color: transparent; color: #475569; border-color: #cbd5e1; }
+.btn-secundario:hover { background-color: #f1f5f9; border-color: #94a3b8; color: #1e293b; }
+.btn-grande-centro { display: block; width: 100%; max-width: 320px; margin: 2rem auto 0 auto; padding: 1.2rem; font-size: 1.2rem; }
+.controles-sesion { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center; }
+
+/* --- Otros Componentes --- */
+.header-gestion { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+.tabla-pacientes, .tabla-posturas { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+.tabla-pacientes th, .tabla-pacientes td, .tabla-posturas th, .tabla-posturas td { padding: 0.8rem 1rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+.tabla-pacientes th, .tabla-posturas th { background-color: #f8fafc; font-weight: 600; color: #475569; }
+.acciones-paciente, .acciones-postura { display: flex; gap: 0.5rem; }
+.progreso-serie { font-size: 1rem; font-weight: 500; color: #555; background-color: #e0f2f1; padding: 0.5rem 1rem; border-radius: 20px; margin-bottom: 1rem; }
+.imagen-postura-grande { width: 100%; max-width: 500px; height: auto; border-radius: 8px; background-color: #eee; min-height: 300px; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+#timer-display { font-size: 4rem; font-weight: bold; margin: 1rem 0; color: #1ABC83; }
+
+/* ======                    ESTILOS RESPONSIVE                     ====== */
+@media (max-width: 992px) {
+  .panel { flex-direction: column; }
+  .menu-lateral { width: 100%; border-right: none; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: center; padding: 0.5rem 0; flex-wrap: wrap; }
+  .btn-menu { width: auto; border-radius: 6px; margin: 0.2rem; border-left: none; }
+  .btn-menu.activo { border-left: none; background-color: #1ABC83; color: white; }
 }
-
-/* Estilos de formularios comunes */
-.formulario {
-  display: flex;
-  flex-direction: column;
-}
-
-.formulario h2 {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  color: white;
-}
-
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="password"],
-.formulario input[type="tel"],
-.formulario input[type="date"] {
-  margin: 0.5rem 0;
-  padding: 0.8rem;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  background-color: white;
-}
-
-.formulario input:focus {
-  outline: 2px solid #1ABC83;
-  border-color: transparent;
-}
-
-.fila-doble {
-  display: flex;
-  gap: 1rem;
-}
-
-.fila-doble > * {
-  flex: 1;
-}
-
-.grupo-radio {
-  display: flex;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.radio-opcion {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-}
-
-.radio-opcion input[type="radio"] {
-  accent-color: #1ABC83;
-}
-
-/* Botones */
-.btn-primario {
-  background-color: #1ABC83;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 1rem;
-}
-
-.btn-primario:hover {
-  background-color: #1ABC83;
-}
-
-/* Enlaces */
-.enlace-registro,
-.enlace-login {
-  text-align: center;
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-}
-
-.formulario a {
-  color: #00a896;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.formulario a:hover {
-  color: #00887b;
-  text-decoration: underline;
-}
-
-.opciones-rol {
-  font-size: 0.9rem;
-  margin: 1rem 0;
-}
-
-.btn-grande-centro {
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  margin: 2rem auto 0 auto;
-  padding: 1.2rem;
-  font-size: 1.2rem;
-  background-color: #1ABC83;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s;
-}
-
-.btn-grande-centro:hover {
-  background-color: #17a673;
-}
-
-
-/* --- Estilos para Notificaciones (Toasts) --- */
-#toast-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.toast {
-    padding: 15px 20px;
-    border-radius: 8px;
-    color: white;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-.toast.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.toast.success {
-    background-color: #28a745; /* Verde éxito */
-}
-
-.toast.error {
-    background-color: #dc3545; /* Rojo error */
-}
-/* --- ESTILOS PARA BOTÓN SECUNDARIO --- */
-.btn-secundario {
-  background-color: transparent;
-  color: #555; /* Un color de texto más neutro */
-  border: 2px solid #ccc; /* Borde sutil */
-  padding: calc(0.8rem - 2px); /* Ajustamos el padding para compensar el borde */
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none; /* Para que el enlace 'Ver detalles' no esté subrayado */
-  display: inline-flex; /* Para alinear el texto verticalmente */
-  align-items: center;
-  justify-content: center;
-  line-height: 1.2;
-}
-
-.btn-secundario:hover {
-  background-color: #f0f0f0; /* Un color de fondo suave al pasar el mouse */
-  border-color: #bbb;
-  color: #333;
-}
-
-.controles-sesion {
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.tabla-pacientes {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1.5rem;
-    }
-    .tabla-pacientes th, .tabla-pacientes td {
-      padding: 0.8rem 1rem;
-      border-bottom: 1px solid #e0e0e0;
-      text-align: left;
-    }
-    .tabla-pacientes th {
-      background-color: #f8f9fa;
-      font-weight: 500;
-      color: #333;
-    }
-    .acciones-paciente {
-      display: flex;
-      gap: 0.5rem;
-    }
-    .header-gestion {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1.5rem;
-    }
-    
-
-    .paso-asignacion {
-      margin-bottom: 2rem;
-    }
-    .resumen-serie {
-      border-top: 1px solid #eee;
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      color: #555;
-    }
-    .resumen-serie p {
-      margin: 0.5rem 0;
-    }
-
-.paso-creacion {
-      border-bottom: 2px solid #e0f2f1;
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
-    }
-    .constructor-secuencia {
-      display: flex;
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-    .catalogo-posturas, .secuencia-actual {
-      flex: 1;
-      background-color: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 8px;
-    }
-    .catalogo-posturas h4, .secuencia-actual h4 {
-      margin-top: 0;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.8rem;
-    }
-    .postura-disponible, .postura-en-serie {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem;
-      border-radius: 4px;
-      margin-bottom: 0.5rem;
-      background: white;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-    .postura-en-serie input {
-      width: 80px;
-      text-align: center;
-    }
-    .btn-anadir {
-        background-color: #28a745;
-        color: white;
-        border: none;
-        padding: 0.4rem 0.8rem;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    .postura-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-    .imagen-postura-grande {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      border-radius: 8px;
-      background-color: #eee; /* Placeholder color */
-      min-height: 300px; /* Placeholder height */
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .progreso-serie {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #555;
-        background-color: #e0f2f1;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        margin-bottom: 1rem;
-    }
-.tabla-posturas {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1.5rem;
-    }
-    .tabla-posturas th, .tabla-posturas td {
-      padding: 0.8rem 1rem;
-      border-bottom: 1px solid #e0e0e0;
-      text-align: left;
-    }
-    .tabla-posturas th {
-      background-color: #f8f9fa;
-    }
-    .acciones-postura {
-      display: flex;
-      gap: 0.5rem;
-    }
-    
-    .terapia-tag {
-        display: inline-block;
-        background-color: #e0f2f1;
-        color: #00796b;
-        padding: 0.2rem 0.6rem;
-        border-radius: 12px;
-        font-size: 0.8rem;
-        margin: 2px;
-    }
-
-.grupo-checkbox { display: flex; flex-wrap: wrap; gap: 1.5rem; background-color: #f8f9fa; padding: 1rem; border-radius: 8px;}
-    .grupo-checkbox label { display: flex; align-items: center; gap: 0.5rem; }
-
-  
-.grupo-botones-rol button{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-
-}
-
-.controles-sesion a{
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-#detalles-btn{
-  color: #000;
+@media (max-width: 768px) {
+  .contenido-panel, .tarjeta { padding: 1rem; }
+  .barra { padding: 0.8rem 1rem; flex-direction: column; gap: 0.5rem; }
+  .marca { margin-right: 0; }
+  .contenedor-izquierdo { width: 100%; min-width: unset; padding: 1rem; justify-content: flex-start; margin-top: 1rem; }
+  .contenedor-formulario { padding: 1.5rem; }
+  .titulo-logo { font-size: 2.8rem; }
+  .fila-doble { flex-direction: column; gap: 0; }
+  .tabla-pacientes, .tabla-posturas { display: block; overflow-x: auto; white-space: nowrap; }
+  .imagen-postura-grande { min-height: 200px; }
+  #timer-display { font-size: 3.5rem; }
+  .controles-sesion { flex-direction: column; align-items: stretch; }
+  .controles-sesion .btn { width: 100%; margin: 0.2rem 0; }
+  .fondo {background-attachment: scroll;}
 }
