@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ejecutando Serie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Panel de Terapia</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
+
 <body class="dashboard">
   <div class="barra">
-    <img src="../assets/img/logo.png" alt="Logo" class="logo" />
-    <div class="marca">Equilibrio Vital</div>
+    <img src="../assets/img/logo.png" alt="Logo Casa Anahata" class="logo">
+    <h1 class="marca">Casa Anahata</h1>
     <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.html'">Cerrar sesión</button>
   </div>
 
   <div class="panel">
     <div class="menu-lateral">
-      <button class="btn-menu activo">Ejecutar sesión</button>
-      <button class="btn-menu" onclick="location.href='registroSesion.html'">Registrar evaluación</button>
-      <button class="btn-menu" onclick="location.href='detalleSesion.html'">Ver historial</button>
+      <button class="btn-menu activo">Mi Sesión Actual</button>
     </div>
 
     <div class="contenido-panel">
@@ -32,12 +32,14 @@
             
             <div class="controles-sesion">
                 <button id="start-pause-btn" class="btn btn-primario">Pausar</button>
-                <button id="reset-btn" class="btn btn-secundario">Reiniciar Postura</button>
                 <a id="detalles-btn" href="visualizarPosturas.html" class="btn-secundario">Ver Instrucciones</a>
+                <a href="registroDolorFinalComentario.html" class="btn btn-secundario">Avanzar</a>
+
             </div>
         </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>

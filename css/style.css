@@ -229,9 +229,26 @@ padding: 0px; margin-top: 0px; margin-bottom: 0px;}
   display: block;
   width: 100%;
   max-width: 320px;
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto;
   padding: 1.2rem;
   font-size: 1.2rem;
+  background-color: #65b8a6; 
+  color: #1f192f; 
+  border: 2px solid #2d6073; 
+  border-radius: 8px; 
+  text-align: center; 
+  font-weight: bold; 
+  transition: background-color 0.3s, transform 0.2s ease-in-out; 
+}
+
+.btn-grande-centro:hover {
+  background-color: #2d6073; 
+  color: #f0f7da; 
+  transform: scale(1.05); 
+}
+
+.btn-grande-centro:active {
+  transform: scale(1); 
 }
 
 .controles-sesion {

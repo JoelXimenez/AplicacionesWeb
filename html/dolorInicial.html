@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ejecutar Sesión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Panel de Terapia</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
-  <header class="barra">
+
+<body class="dashboard">
+  <div class="barra">
     <img src="../assets/img/logo.png" alt="Logo Casa Anahata" class="logo">
-    <h1 class="marca">Equilibrio Vital</h1>
-  </header>
+    <h1 class="marca">Casa Anahata</h1>
+    <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.html'">Cerrar sesión</button>
+  </div>
+
+  <div class="panel">
+    <div class="menu-lateral">
+      <button class="btn-menu activo">Mi Sesión Actual</button>
+    </div>
 
   <main class="contenido-panel">
     <div class="tarjeta" style="text-align: center;">
@@ -19,8 +27,9 @@
         “Empieza a sanar”
       </p>
 
-      <form class="formulario" action="ejecucionSerie.html" method="GET" style="align-items: center;">
-        <label for="dolorInicio" style="margin-bottom: 1rem;">Nivel de molestia al inicio</label>
+      <form class="formulario" style="align-items: center;">
+        <label for="dolorInicio" style="margin-bottom: 1rem;">Antes de comenzar. Selecciona tu nivel de molestia al
+          inicio</label>
         <select name="dolorInicio" id="dolorInicio" required style="margin-bottom: 2rem; max-width: 300px;">
           <option value="">Seleccione</option>
           <option value="0">Sin dolor/molestia</option>
@@ -29,9 +38,11 @@
           <option value="3">Intenso</option>
           <option value="4">Máximo dolor/molestia</option>
         </select>
-        <button class="btn-grande-centro" type="submit">Comenzar Serie</button>
+        <a href="posturaEjecucion.html" class="btn btn-grande-centro">Registrar dolor</a>
       </form>
     </div>
   </main>
+  </div>
 </body>
+
 </html>

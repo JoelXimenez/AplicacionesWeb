@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registrar Evaluación</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Panel de Terapia</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+
+<body class="dashboard">
   <div class="barra">
-    <img src="../assets/img/logo.png" alt="Logo Casa Anahata" class="logo" />
-    <h1 class="marca">Equilibrio Vital</h1>
+    <img src="../assets/img/logo.png" alt="Logo Casa Anahata" class="logo">
+    <h1 class="marca">Casa Anahata</h1>
     <button class="btn-cerrar-sesion" onclick="location.href='inicioSesion.html'">Cerrar sesión</button>
   </div>
 
   <div class="panel">
     <div class="menu-lateral">
-      <button class="btn-menu" onclick="location.href='ejecucionSerie.html'">Ejecutar sesión</button>
-      <button class="btn-menu activo">Registrar evaluación</button>
-      <button class="btn-menu" onclick="location.href='detalleSesion.html'">Ver historial</button>
+      <button class="btn-menu activo">Mi Sesión Actual</button>
     </div>
 
     <div class="contenido-panel">
@@ -36,9 +36,11 @@
           </select>
 
           <label for="comentario" class="texto-label" style="margin-bottom: 1rem;">Comentario sobre la sesión</label>
-          <textarea id="comentario" name="comentario" rows="5" required style="margin-bottom: 2rem; max-width: 100%;"></textarea>
+          <textarea id="comentario" name="comentario" rows="5" required
+            style="margin-bottom: 2rem; max-width: 100%;"></textarea>
 
-          <button class="btn btn-primario" type="submit">Guardar evaluación</button>
+
+          <a href="dashboardPaciente.html" class="btn btn-grande-centro">Finalizar Sesión</a>
         </form>
 
 
@@ -46,4 +48,5 @@
     </div>
   </div>
 </body>
+
 </html>
